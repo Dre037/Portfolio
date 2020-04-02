@@ -1,0 +1,322 @@
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.main-container {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Roboto";
+}
+
+* .ft-mtst {
+  font-family: "Montserrat Alternates";
+  font-weight: 700;
+}
+
+nav {
+  background-color: #1c6f80;
+}
+
+nav h3 {
+  margin: 0;
+}
+
+nav a,
+nav a:hover {
+  color: white;
+  opacity: 1;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section > h3 {
+  text-align: center;
+  width: 100%;
+}
+
+section .center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.paralax {
+  height: 30vh;
+}
+
+#about {
+  padding: 2rem 3rem;
+}
+
+#about > div h1 {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+#about > div p {
+  font-size: 24px;
+  margin-bottom: auto;
+}
+
+#about img {
+  height: 25vw;
+  width: 25vw;
+  margin-top: auto;
+  margin-bottom: 7vh;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px 0px #e7e7e7;
+}
+
+#about .center-box:last-child:after {
+  content: "";
+  height: 40vw;
+  width: 40vw;
+  background-image: url(../Img/triangle.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+#about img ~ span {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin-bottom: auto;
+}
+/* section:first-of-type {
+    margin-top: -10vh;
+} */
+
+#skills {
+  align-content: flex-start;
+}
+
+#skills h3 {
+  margin-bottom: 40px;
+}
+
+.line-skill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.line-skill svg {
+  height: 5vw;
+  width: 5vw;
+  margin: 20px;
+  transition: fill 0.4s ease-in-out;
+}
+
+.line-skill .caption {
+  text-transform: uppercase;
+  text-align: center;
+}
+.line-skill > div {
+  width: 20%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.line-skill > div.angular,
+.line-skill > div.react,
+.line-skill > div.vue-dot-js {
+  width: 25%;
+}
+
+.line-skill .thermometer {
+  background-color: white;
+  padding: 7px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 #ccc;
+  right: 12.5%;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.line-skill > div:hover > .thermometer {
+  visibility: visible;
+  opacity: 1;
+}
+
+.line-skill .thermometer span {
+  display: flex;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid;
+  margin: 3px 0;
+}
+
+#particles-js {
+  position: relative;
+  background-color: #1c6f80;
+}
+
+.main-container ~ div[style*="absolute"] {
+  display: none;
+}
+
+#particles-js canvas {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+}
+
+#works {
+  align-items: flex-start;
+}
+
+#works h3 {
+  margin-top: 30px;
+}
+
+#works .card {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+#works .card .card-hover {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 10px 20px;
+  position: absolute;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: transform 0.4s linear;
+}
+
+#works .card .card-img {
+  height: 300px;
+  object-fit: cover;
+}
+
+#works .card .card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#works .card:hover .card-hover {
+  transform: translateY(0);
+}
+
+#works h3 ~ p {
+  width: 75%;
+  font-size: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#contact {
+  min-height: 10vh;
+  background-color: #231f20;
+  color: white;
+  max-height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1vw 5vw;
+}
+
+#contact div {
+  display: flex;
+  align-items: flex-end;
+  margin: 10px;
+}
+
+#contact a {
+  color: white;
+}
+
+#contact img {
+  height: 40px;
+  width: 40px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    section {
+        height: auto;
+    }
+
+    #works  .card {
+        width: 70%;
+        margin: 30px auto;
+    }
+
+    @media screen and (max-width: 700px) {
+        #about {
+            flex-direction: column-reverse;
+            padding: 1rem 1.5rem;
+        }
+
+        #about img {
+            width: 250px;
+            height: 250px;
+        }
+
+        #about > div h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #about > div p {
+            font-size: 18px;
+        }
+        .line-skill > div,
+        .line-skill > div.angular,
+        .line-skill > div.react,
+        .line-skill > div.vue-dot-js {
+            width: 100%;
+        }
+
+        .line-skill svg {
+            width: 100px;
+            height: 100px;
+        }
+
+        .line-skill .thermometer {
+            right: 25%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #works  .card {
+            width: 90%;
+        }   
+    }
+}
