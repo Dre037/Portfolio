@@ -131,6 +131,43 @@ Skill.forEach(item => {
   });
 });
 
+
+var Cards = [
+  {
+    name: "BeHive",
+    src: "./Img/capaBeHive.svg",
+    about:
+      "BeHive foi um projeto de faculdade, que liderei junto de um amigo, onde consistia em criar um produto ou adaptar um existente, nós decidimos criar o nosso e ele foi o BeHive " +
+      "Após alimentarmos a ideia, partirmos para o processo de construção visual da mesma, onde trabalhamos em principal o logotipo, após várias e várias versões, decidimos qual usar e assim " +
+      "criamos o manual de identidade visual, onde aqui eu só trouxe a capa.",
+    data: "2019"
+  },
+  {
+    name: "Unicorp",
+    src: "./Img/capaUnicorp.svg",
+    about:
+      "Unicorp, é um projeto que ainda está em desenvolvimento, foi a minha primeira experiência de mercado como autônomo, sempre gostei de trabalhar do lado do cliente, então junto com " +
+      "eles, nós refatoramos toda identidade visual da empresa, buscando trazer a marca para a atualidade sem perder sua simplicidade. Criamos o manual de identidade visual e estamos em processo de " +
+      "criação de um novo site.",
+    data: "2019"
+  }
+];
+
+var skillWork = $("#works");
+Cards.forEach(item => {
+  var template = `
+    <div class="card">
+        <img class="card-img" src="${item.src}">
+        <div class="card-hover"><p>${item.about}</p></div>
+        <div class="card-body">
+            <h5>${item.name}</h5>
+            <span>${item.data}</span>
+        </div>
+    </div>
+    `;
+  skillWork.append(template);
+});
+
 particlesJS("particles-js", {
   particles: {
     number: { value: 150, density: { enable: true, value_area: 800 } },
@@ -203,39 +240,3 @@ update = function() {
   requestAnimationFrame(update);
 };
 requestAnimationFrame(update);
-
-var Cards = [
-  {
-    name: "BeHive",
-    src: "../Img/capaBeHive.svg",
-    about:
-      "BeHive foi um projeto de faculdade, que liderei junto de um amigo, onde consistia em criar um produto ou adaptar um existente, nós decidimos criar o nosso e ele foi o BeHive " +
-      "Após alimentarmos a ideia, partirmos para o processo de construção visual da mesma, onde trabalhamos em principal o logotipo, após várias e várias versões, decidimos qual usar e assim " +
-      "criamos o manual de identidade visual, onde aqui eu só trouxe a capa.",
-    data: "2019"
-  },
-  {
-    name: "Unicorp",
-    src: "../Img/capaUnicorp.svg",
-    about:
-      "Unicorp, é um projeto que ainda está em desenvolvimento, foi a minha primeira experiência de mercado como autônomo, sempre gostei de trabalhar do lado do cliente, então junto com " +
-      "eles, nós refatoramos toda identidade visual da empresa, buscando trazer a marca para a atualidade sem perder sua simplicidade. Criamos o manual de identidade visual e estamos em processo de " +
-      "criação de um novo site.",
-    data: "2019"
-  }
-];
-
-var skillWork = $("#works");
-Cards.forEach(item => {
-  var template = `
-    <div class="card">
-        <img class="card-img" src="${item.src}">
-        <div class="card-hover"><p>${item.about}</p></div>
-        <div class="card-body">
-            <h5>${item.name}</h5>
-            <span>${item.data}</span>
-        </div>
-    </div>
-    `;
-  skillWork.append(template);
-});
